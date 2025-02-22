@@ -4,8 +4,9 @@ import parser_checker as pc #import module with overrided args via cli
 import datetime
 import shutil
 import sys
+import logging
 
-#добавить
+
 
 def convert_size(size_bytes: int) -> str:
     """Convert to human-readable file size"""
@@ -40,15 +41,12 @@ def make_tarfile(full_name_tarfile: str, target_path: str):
 
 def main():
     """main func for calling others"""
+    logging.basicConfig(level=logging.INFO, filename="/var/log/messages", format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    
     tar_file = create_fulname()
-    print(make_tarfile(tar_file, pc.args.target))
-
-
-    print(os.stat(tar_file))
-
+    logging.info(make_tarfile(tar_file, pc.args.target))
     shutil.move(tar_file, pc.args.backup)
 
 
 if __name__ == "__main__":
     main()
-    #os.stat(tar_file)
