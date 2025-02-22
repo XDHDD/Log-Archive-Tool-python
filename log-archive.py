@@ -41,7 +41,7 @@ def make_tarfile(full_name_tarfile: str, target_path: str):
 
 def main():
     """main func for calling others"""
-    logging.basicConfig(level=logging.INFO, filename="/var/log/messages", format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    logging.basicConfig(level=logging.INFO)
     
     tar_file = create_fulname()
     logging.info(make_tarfile(tar_file, pc.args.target))

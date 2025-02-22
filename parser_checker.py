@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser(
                     prog='log-archive.py',
                     description='log-archive is utility for making backups of /var/log to /var/backup path with timestamp',
                     usage='%(prog)s [options]',
-                    epilog='Project for roadmap.sh https://docs.python.org/3/library/argparse.html')
+                    epilog='Project for roadmap.sh https://roadmap.sh/projects/log-archive-tool/')
 
 #add a few args
 parser.add_argument("-c", "--compress", 
