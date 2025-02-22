@@ -2,7 +2,7 @@
 [roadmap.sh](https://roadmap.sh/projects/log-archive-tool) project
 
 ## Overview
-log-archive.py is utility for making backups to /var/backup directory with timestamp providing a few keys for custom behavior. See `log-archive -h` to see more.
+log-archive.py is utility for making backups to /var/backup directory with timestamp providing a few keys for custom behavior. See `python log-archive.py help` to see more.
 
 ## Instalation and usage
 1. Clone the project
